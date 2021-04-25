@@ -17,8 +17,6 @@ La ocultación mantendrá ocultos los procesos internos del comportamiento de un
 
 ![](diagramadesecuenciaparcial.jpg)
 
-## Bonus
-
 
 # PARCIAL 2
 
@@ -35,3 +33,16 @@ Los 3 momentos importantes de las excepciones son try, catch y finally. El bloqu
 La sobreescritura de métodos permite implementar en la subclase un método heredado para que funcione de acuerdo a lo que se le pide y no a lo definido en la clase padre. El compilador busca el método de abajo arriba hasta que lo encuentra definido, de lo contrario, utilizará el de la superclase.
 
 ## Diagrama de secuencia
+
+
+
+
+
+
+# EVIDENCIA
+
+
+![](evidencia1.png)
+![](evidencia2.png)
+![](evidencia3.png)
+![](evidencia4.png)

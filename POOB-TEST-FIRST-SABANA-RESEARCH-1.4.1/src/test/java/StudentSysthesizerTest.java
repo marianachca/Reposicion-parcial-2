@@ -28,13 +28,13 @@ public class StudentSysthesizerTest {
     @Test
     public void MakethesummarizeStudent()
     {
-        StudentSynthesizer s = new StudentSynthesizer();
-        assertTrue(s.SynthetizerProject(wellFormedProject).contains("Pepe, 10"));
+        StudentSynthesizer ss = new StudentSynthesizer();
+        assertTrue(ss.SynthetizerProject(wellFormedProject).contains("Mariana, 9"));
     }
     private void setupWellFormedProject() {
 
         Group group = new Group(faker.team().name());
-        wellFormedProject = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group);
+        wellFormedProject = new Project(faker.team().name(), LocalDate.now().minusDays(9), LocalDate.now().plusDays(10), group);
         Iteration iteration = new Iteration("Protect", wellFormedProject);
 
         // Create a Normal Activity
@@ -46,7 +46,7 @@ public class StudentSysthesizerTest {
         activity.addStep(new Step(faker.team().name(), Duration.ofDays(1)));
         DocumentedActivity documentedActivity = new DocumentedActivity(faker.team().name(), Activity.ACTIVE_STATE, iteration, activity);
         documentedActivity.addQuestion(new Question(Question.EASY_QUESTION, faker.team().name(), Duration.ofDays(1)));
-        Student student = new Student("Pepe",Duration.ofDays(10));
+        Student student = new Student("Mariana",Duration.ofDays(9));
         wellFormedProject.getMembers().add(student);
     }
 }

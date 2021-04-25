@@ -28,8 +28,8 @@ public class ExecutiveSysthesizerTest {
     @Test
     public void MakethesummarizeIterations()
     {
-        ExecutiveSynthesizer s = new ExecutiveSynthesizer();
-        assertTrue(s.SynthetizerProject(wellFormedProject).contains("Protect, 3"));
+        ExecutiveSynthesizer es = new ExecutiveSynthesizer();
+        assertTrue(es.SynthetizerProject(wellFormedProject).contains("Protect, 3"));
     }
     private void setupWellFormedProject() {
 
