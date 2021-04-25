@@ -1,10 +1,11 @@
-import entities.*;
+package entities;
 
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DocumentedActivity extends Activity {
+public class
+DocumentedActivity extends Activity {
 
     private NormalActivity activity;
     private ISynthesizer synthesizer;
