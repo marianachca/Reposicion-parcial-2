@@ -210,7 +210,6 @@ public class ProjectTest {
         badFormedProject6 = new Project(faker.team().name(), LocalDate.now().minusDays(10), LocalDate.now().plusDays(10), group);
         Iteration iteration = new Iteration(faker.team().name(), badFormedProject6);
 
-
         NormalActivity normalActivity = new NormalActivity(faker.team().name(), Activity.ACTIVE_STATE, iteration);
         normalActivity.addStep(new Step(faker.team().name(), Duration.ofDays(1)));
 
