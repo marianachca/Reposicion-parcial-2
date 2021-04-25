@@ -39,6 +39,11 @@ La sobreescritura de métodos permite implementar en la subclase un método here
 
 ## Diagrama de clases
 
+![](SabanaResearch.png)
+
+## Diagrama de clases modificado
+
+![](diagramamod.png)
 
 
 
