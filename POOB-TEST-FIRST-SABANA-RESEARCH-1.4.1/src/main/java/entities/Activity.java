@@ -1,6 +1,8 @@
 package entities;
 
-public class Activity {
+import java.time.Duration;
+
+public abstract class Activity {
 
     public static final String ACTIVE_STATE = "active";
     public static final String CLOSED_STATE = "closed";
@@ -28,4 +30,5 @@ public class Activity {
         return false;
     }
 
+    public abstract Duration getDuration();
 }
