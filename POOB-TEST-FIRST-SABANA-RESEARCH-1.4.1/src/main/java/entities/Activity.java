@@ -16,19 +16,21 @@ public abstract class Activity {
     public Activity(String name, String state, Iteration iteration) {
         this.name = name;
         this.state = state;
-        this.iteration = iteration;
 
-        this.iteration.addActivity(this);
+        if (iteration != null) {
+            this.iteration = iteration;
+            this.iteration.addActivity(this);
+        }
     }
-
-    /**
-     * Evaluate if an activity is active.
-     *
-     * @return true if the activity is in state pending or active, otherwise return false.
-     */
     public boolean isActive() {
-        return false;
-    }
+        boolean active = false;
 
-    public abstract Duration getDuration();
+        if(this.state.equals(ACTIVE_STATE) || this.state.equals(PENDING_STATE))
+        {
+            active = true;
+        }
+        return active;
+    }
+    public abstract Duration getDuration() throws SabanaResearchException;
+
 }

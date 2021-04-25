@@ -22,13 +22,21 @@ public class SabanaResearch {
         return this.summaries.size();
     }
 
-    /**
-     * Create a summary entry in the current date.
-     * - Calculate the count of active projects.
-     *
-     * @return The new Summary entry.
-     */
+    public void addSummary(Summary summary){this.summaries.add(summary);}
+
     public Summary createSummaryEntry() {
-        return null;
+        int activitiePro=0,openA=0,closedP=0;
+
+
+        for(Group g: this.groups)
+        {
+            activitiePro+=g.countActiveProjects();
+            openA += g.CountOpenActivities();
+            closedP += g.CountClosedActivities();
+        }
+        Summary s = new Summary(activitiePro,LocalDate.now(),openA,closedP);
+        addSummary(s);
+        return s;
     }
+
 }

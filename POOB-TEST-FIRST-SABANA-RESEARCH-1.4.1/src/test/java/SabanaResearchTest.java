@@ -3,13 +3,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class SabanaResearchTest {
 
@@ -45,15 +45,50 @@ public class SabanaResearchTest {
         iterations.add(new Iteration("1. Design new model", projects.get(2)));
 
         // Create activities
-        new Activity("Investigate ARN", Activity.CLOSED_STATE, iterations.get(0));
-        new Activity("Investigate infected people", Activity.CANCELED_STATE, iterations.get(0));
-        new Activity("Test in animals", Activity.CANCELED_STATE, iterations.get(1));
-        new Activity("Test in humans", Activity.CLOSED_STATE, iterations.get(1));
+        new Activity("Investigate ARN", Activity.CLOSED_STATE, iterations.get(0)) {
+            @Override
+            public Duration getDuration() throws SabanaResearchException {
+                return null;
+            }
+        };
+        new Activity("Investigate infected people", Activity.CANCELED_STATE, iterations.get(0)) {
+            @Override
+            public Duration getDuration() throws SabanaResearchException {
+                return null;
+            }
+        };
+        new Activity("Test in animals", Activity.CANCELED_STATE, iterations.get(1)) {
+            @Override
+            public Duration getDuration() throws SabanaResearchException {
+                return null;
+            }
+        };
+        new Activity("Test in humans", Activity.CLOSED_STATE, iterations.get(1)) {
+            @Override
+            public Duration getDuration() throws SabanaResearchException {
+                return null;
+            }
+        };
 
-        new Activity("Verify color", Activity.CLOSED_STATE, iterations.get(2));
-        new Activity("Buy massive", Activity.PENDING_STATE, iterations.get(2));
+        new Activity("Verify color", Activity.CLOSED_STATE, iterations.get(2)) {
+            @Override
+            public Duration getDuration() throws SabanaResearchException {
+                return null;
+            }
+        };
+        new Activity("Buy massive", Activity.PENDING_STATE, iterations.get(2)) {
+            @Override
+            public Duration getDuration() throws SabanaResearchException {
+                return null;
+            }
+        };
 
-        new Activity("Study previous models", Activity.PENDING_STATE, iterations.get(3));
+        new Activity("Study previous models", Activity.PENDING_STATE, iterations.get(3)) {
+            @Override
+            public Duration getDuration() throws SabanaResearchException {
+                return null;
+            }
+        };
 
         sabanaResearch = new SabanaResearch(groups);
         // Assert count of plans
