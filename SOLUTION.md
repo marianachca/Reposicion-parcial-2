@@ -35,6 +35,9 @@ La sobreescritura de métodos permite implementar en la subclase un método here
 ## Diagrama de secuencia
 
 
+![](diagramasecuenciarepo.png)
+
+## Diagrama de clases
 
 
 
