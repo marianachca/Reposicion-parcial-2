@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'org.sonarqube' version '3.1.1'
 }
 
 group 'sabana.poob'
@@ -25,3 +26,14 @@ test {
     }
 }
 
+
+sonarqube {
+
+    properties {
+        property 'sonar.host.url', 'http://localhost:9000/'
+        property 'sonar.projectName', 'MARIANA CHACON - SABANA RESEARCH'
+        property 'sonar.projectKey', 'sobana.poob:gradle-multimodule'
+        property 'sonar.sourceEncoding', 'UTF-8'
+
+    }
+}
